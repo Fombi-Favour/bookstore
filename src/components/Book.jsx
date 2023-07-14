@@ -1,7 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../style/Header.module.css';
 
-// eslint-disable-next-line react/prop-types
 const Book = ({ title, author, category }) => (
   <li className={styles.lesson_panel}>
     <div className={styles.text}>
@@ -11,5 +12,11 @@ const Book = ({ title, author, category }) => (
     </div>
   </li>
 );
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+};
 
 export default Book;
