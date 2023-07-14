@@ -1,11 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
+import '../index.css';
 
 const Layout = () => (
-  <div>
-    <Navbar />
-    <Outlet />
+  <div className="wrapper">
+    <div className="panel-bg">
+      <Navbar />
+      <Outlet />
+    </div>
   </div>
 );
 
