@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FaUserAlt } from 'react-icons/fa';
-import '../index.css';
 
 const links = [
   { path: '/', text: 'Books' },
