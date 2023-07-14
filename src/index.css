@@ -11,12 +11,12 @@ body {
 }
 
 .panel-bg {
-  border: 1px solid;
   background: #fafafa;
   border-radius: 4px;
 
   /* height: 68.563rem; */
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.4);
+  padding: 0 0 9.25rem;
 }
 
 .navbar {
