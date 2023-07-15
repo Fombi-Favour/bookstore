@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap');
+
+.lesson_panel {
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  padding: 2rem 7.188rem 1.625rem 1.688rem;
+  margin: 2.313rem 6.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.category {
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.975rem;
+  font-weight: 700;
+}
+
+.title {
+  color: #121212;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.author,
+.action li button {
+  color: #4386bf;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.action {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  gap: 0.7rem;
+}
+
+.action li {
+  border-right: 1px solid #e8e8e8;
+  padding: 0.4rem 1rem;
+}
+
+.action li:nth-child(1) {
+  padding-left: 0;
+}
+
+.action li:nth-child(3) {
+  border-right: none;
+}
+
+.action li button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* progress */
+.progress p {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #e8e8e8;
+  border-top-color: #307bbe;
+  border-right-color: #307bbe;
+  border-bottom-color: #377cf6;
+  border-radius: 50px;
+}
