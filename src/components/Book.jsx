@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import styles from '../style/Header.module.css';
-import { removeBook } from '../redux/books/booksSlice';
+import { removeBookItems } from '../redux/books/booksSlice';
 
-const Book = ({
-  itemId, title, author, category,
-}) => {
+const Book = ({ books }) => {
+  const { title, author, category } = books;
   const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(removeBookItems(books.item_id));
+  };
 
   return (
     <div className={styles.lesson_panel}>
@@ -18,7 +21,7 @@ const Book = ({
       </div>
       <div>
         <button type="button">Comments</button>
-        <button type="button" onClick={() => dispatch(removeBook(itemId))}>Remove</button>
+        <button type="button" onClick={handleDelete}>Remove</button>
         <button type="button">Edit</button>
       </div>
     </div>
@@ -26,10 +29,11 @@ const Book = ({
 };
 
 Book.propTypes = {
-  itemId: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  books: PropTypes.objectOf(PropTypes.string).isRequired,
+  // item_id: PropTypes.string.isRequired,
+  // title: PropTypes.string.isRequired,
+  // author: PropTypes.string.isRequired,
+  // category: PropTypes.string.isRequired,
 };
 
 export default Book;
