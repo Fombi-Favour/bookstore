@@ -3,28 +3,14 @@ import { useSelector } from 'react-redux';
 import Book from './Book';
 
 const Books = () => {
-  // const books = [
-  //   {
-  //     id: 1,
-  //     title: 'Romeo and Julliet',
-  //     author: 'William Shakespare',
-  //     category: 'Romance',
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'The Hunger Games',
-  //     author: 'Suzanne Collins',
-  //     category: 'Action',
-  //   },
-  // ];
-
-  const { bookItems } = useSelector((store) => store.books);
+  const { books } = useSelector((state) => state.book);
+  console.log(books);
 
   return (
-    <ul>
+    <div>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      {bookItems.map((item) => <Book key={item.item_id} {...item} />)}
-    </ul>
+      {books.map((item) => <Book key={item.item_id} {...item} />)}
+    </div>
   );
 };
 
