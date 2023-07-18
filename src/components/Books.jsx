@@ -7,7 +7,6 @@ const Books = () => {
 
   return (
     <div>
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       {books.map((item) => (
         <Book
           key={item.itemId}
