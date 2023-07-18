@@ -41,7 +41,6 @@ const bookSlice = createSlice({
   },
 });
 
-// console.log(bookSlice);
 export const { addBook, removeBook } = bookSlice.actions;
 
 export default bookSlice.reducer;
