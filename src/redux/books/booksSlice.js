@@ -28,6 +28,7 @@ export const postBookItems = createAsyncThunk('book/postBookItems', async (book,
 
   try {
     const response = await axios.post(url, newBook);
+    thunkAPI.dispatch(getBookItems());
     return { book, response };
   } catch (err) {
     thunkAPI.rejectWithValue(err);
@@ -37,7 +38,8 @@ export const postBookItems = createAsyncThunk('book/postBookItems', async (book,
 
 export const removeBookItems = createAsyncThunk('book/removeBookItems', async (id, thunkAPI) => {
   try {
-    const res = await axios.delete(url, id);
+    const res = await axios.delete(`${url}/${id}`, id);
+    thunkAPI.dispatch(getBookItems());
     return { id, response: res.data };
   } catch (err) {
     thunkAPI.rejectWithValue(err);
@@ -64,7 +66,15 @@ const bookSlice = createSlice({
     })
       .addCase(getBookItems.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.books = action.payload;
+        const getBookData = Object.keys(action.payload).map((data) => {
+          const item = {};
+          item.item_id = data;
+          item.title = action.payload[data][0].title;
+          item.author = action.payload[data][0].author;
+          item.category = action.payload[data][0].category;
+          return item;
+        });
+        state.bookContent = getBookData;
       })
       .addCase(getBookItems.rejected, (state) => {
         state.isLoading = false;
