@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/HJsXdwhH2cAEZqBOs2T3/books';
+
 export const bookItems = [
   {
     itemId: 'item1',
