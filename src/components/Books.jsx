@@ -4,12 +4,18 @@ import Book from './Book';
 
 const Books = () => {
   const { books } = useSelector((state) => state.book);
-  console.log(books);
 
   return (
     <div>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      {books.map((item) => <Book key={item.itemId} {...item} />)}
+      {books.map((item) => (
+        <Book
+          key={item.itemId}
+          title={item.title}
+          author={item.author}
+          category={item.category}
+        />
+      ))}
     </div>
   );
 };
