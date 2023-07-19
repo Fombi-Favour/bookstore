@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { useDispatch } from 'react-redux';
 import styles from '../style/Header.module.css';
+import 'react-circular-progressbar/dist/styles.css';
 import { removeBookItems } from '../redux/books/booksSlice';
 
 const Book = ({ books }) => {
   const { title, author, category } = books;
   const dispatch = useDispatch();
+  const progressText = Math.floor(Math.random() * 101);
 
   const handleDelete = () => {
     dispatch(removeBookItems(books.item_id));
@@ -33,7 +36,16 @@ const Book = ({ books }) => {
             </li>
           </ul>
         </div>
-        {/* <div className={styles.progress}></div> */}
+        <div className={styles.progress}>
+          <CircularProgressbar value={progressText} className={styles.progress_pic} />
+          <div className={styles.progress_content}>
+            <span className={styles.progress_text}>
+              {progressText}
+              %
+            </span>
+            <span className={styles.progress_complete}>Completed</span>
+          </div>
+        </div>
       </main>
       {/* <main className={styles.current}></main> */}
     </section>
