@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CircularProgressbar } from 'react-circular-progressbar';
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import styles from '../style/Header.module.css';
 import 'react-circular-progressbar/dist/styles.css';
 import { removeBookItems } from '../redux/books/booksSlice';
