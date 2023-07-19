@@ -150,6 +150,7 @@
   text-transform: uppercase;
   border-radius: 3px;
   border: none;
+  cursor: pointer;
 }
 
 /* AddBooks.jsx styling */
@@ -194,6 +195,10 @@ input::placeholder {
 
 .input_category {
   width: 10.815rem;
+  outline: none;
+  border: 1px solid #e8e8e8;
+  font-size: 1.1rem;
+  letter-spacing: 0.15px;
 }
 
 .btn_submit {
