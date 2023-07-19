@@ -10,9 +10,13 @@
   justify-content: space-between;
 }
 
-/* .lesson_content {
-
-} */
+.lesson_content {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  border-right: 3px solid #e8e8e8;
+  padding-right: 32px;
+}
 
 .text {
   display: flex;
@@ -70,12 +74,32 @@
 }
 
 /* progress */
-.progress p {
+
+.progress {
+  display: flex;
+  gap: 1.21rem;
+}
+
+.progress_pic {
   width: 4.25rem;
   height: 4.25rem;
-  border: 5px solid #e8e8e8;
-  border-top-color: #307bbe;
-  border-right-color: #307bbe;
-  border-bottom-color: #377cf6;
-  border-radius: 50px;
+}
+
+.progress_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress_text,
+.progress_complete {
+  color: #121212;
+}
+
+.progress_text {
+  font-size: 2rem;
+}
+
+.progress_complete {
+  opacity: 0.5;
+  font-size: 0.975rem;
 }
