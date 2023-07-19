@@ -62,3 +62,9 @@ body {
   color: #0290ff;
   cursor: pointer;
 }
+
+/* Home.jsx styling */
+hr {
+  margin: 12px 5rem;
+  border: 1px solid #e8e8e8;
+}
