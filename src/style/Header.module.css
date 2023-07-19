@@ -103,3 +103,40 @@
   opacity: 0.5;
   font-size: 0.975rem;
 }
+
+.current {
+  display: flex;
+  flex-direction: column;
+  gap: 0.41rem;
+  padding: 0 4rem;
+}
+
+.current_1,
+.chapter {
+  color: #121212;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+.current_1 {
+  opacity: 0.5;
+  font-size: 0.813rem;
+  text-transform: uppercase;
+}
+
+.chapter {
+  font-size: 1rem;
+}
+
+.btn_upgrade {
+  width: 11.5rem;
+  height: 2.063rem;
+  background: #0290ff;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: none;
+}
