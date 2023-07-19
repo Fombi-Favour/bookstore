@@ -13,18 +13,30 @@ const Book = ({ books }) => {
   };
 
   return (
-    <div className={styles.lesson_panel}>
-      <div className={styles.text}>
-        <span className={styles.category}>{category}</span>
-        <span className={styles.title}>{title}</span>
-        <span className={styles.author}>{author}</span>
-      </div>
-      <div>
-        <button type="button">Comments</button>
-        <button type="button" onClick={handleDelete}>Remove</button>
-        <button type="button">Edit</button>
-      </div>
-    </div>
+    <section className={styles.lesson_panel}>
+      <main className={styles.lesson_content}>
+        <div>
+          <div className={styles.text}>
+            <span className={styles.category}>{category}</span>
+            <span className={styles.title}>{title}</span>
+            <span className={styles.author}>{author}</span>
+          </div>
+          <ul className={styles.action}>
+            <li>
+              <button type="button">Comments</button>
+            </li>
+            <li>
+              <button type="button" onClick={handleDelete}>Remove</button>
+            </li>
+            <li>
+              <button type="button">Edit</button>
+            </li>
+          </ul>
+        </div>
+        {/* <div className={styles.progress}></div> */}
+      </main>
+      {/* <main className={styles.current}></main> */}
+    </section>
   );
 };
 
