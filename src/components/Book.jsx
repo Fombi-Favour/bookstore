@@ -1,30 +1,63 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import styles from '../style/Header.module.css';
+import 'react-circular-progressbar/dist/styles.css';
 import { removeBookItems } from '../redux/books/booksSlice';
 
 const Book = ({ books }) => {
   const { title, author, category } = books;
   const dispatch = useDispatch();
+  const progressText = Math.floor(Math.random() * 100);
+  const chapterNumber = Math.floor(Math.random() * 21);
 
   const handleDelete = () => {
     dispatch(removeBookItems(books.item_id));
   };
 
   return (
-    <div className={styles.lesson_panel}>
-      <div className={styles.text}>
-        <span className={styles.category}>{category}</span>
-        <span className={styles.title}>{title}</span>
-        <span className={styles.author}>{author}</span>
-      </div>
-      <div>
-        <button type="button">Comments</button>
-        <button type="button" onClick={handleDelete}>Remove</button>
-        <button type="button">Edit</button>
-      </div>
-    </div>
+    <section className={styles.lesson_panel}>
+      <main className={styles.lesson_content}>
+        <div>
+          <div className={styles.text}>
+            <span className={styles.category}>{category}</span>
+            <span className={styles.title}>{title}</span>
+            <span className={styles.author}>{author}</span>
+          </div>
+          <ul className={styles.action}>
+            <li>
+              <button type="button">Comments</button>
+            </li>
+            <li>
+              <button type="button" onClick={handleDelete}>Remove</button>
+            </li>
+            <li>
+              <button type="button">Edit</button>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.progress}>
+          <CircularProgressbar value={progressText} className={styles.progress_pic} />
+          <div className={styles.progress_content}>
+            <span className={styles.progress_text}>
+              {progressText}
+              %
+            </span>
+            <span className={styles.progress_complete}>Completed</span>
+          </div>
+        </div>
+      </main>
+      <main className={styles.current}>
+        <span className={styles.current_1}>current chapter</span>
+        <span className={styles.chapter}>
+          Chapter
+          {' '}
+          {chapterNumber}
+        </span>
+        <button type="button" className={styles.btn_upgrade}>update progress</button>
+      </main>
+    </section>
   );
 };
 
