@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getBookItems } from '../redux/books/booksSlice';
 import Book from './Book';
+import styles from '../style/Header.module.css';
 
 const Books = () => {
   const { bookContent } = useSelector((state) => state.book);
@@ -12,7 +13,7 @@ const Books = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={styles.list}>
       {bookContent.map((item) => (
         <Book
           key={item.item_id}
