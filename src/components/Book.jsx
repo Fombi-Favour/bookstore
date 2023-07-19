@@ -9,7 +9,7 @@ import { removeBookItems } from '../redux/books/booksSlice';
 const Book = ({ books }) => {
   const { title, author, category } = books;
   const dispatch = useDispatch();
-  const progressText = Math.floor(Math.random() * 101);
+  const progressText = Math.floor(Math.random() * 100);
   const chapterNumber = Math.floor(Math.random() * 21);
 
   const handleDelete = () => {
