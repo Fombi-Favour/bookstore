@@ -10,11 +10,37 @@
   display: none;
 }
 
+.loading {
+  height: 500px;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  color: #0290ff;
+  margin-top: 5rem;
+}
+
+.loading .circular {
+  border: 8px solid #e8e8e8;
+  border-top-color: #0290ff;
+  color: transparent;
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 50%;
+  animation: spin infinite 2s;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Book.jsx styling */
 .lesson_panel {
   border: 1px solid #e8e8e8;
   background: #fff;
-  padding: 2rem 7.188rem 1.625rem 1.688rem;
+  padding: 2rem 2.188rem 1.625rem 1.688rem;
   margin: 2.313rem 6.25rem 0;
   display: flex;
   align-items: center;
@@ -24,7 +50,7 @@
 .lesson_content {
   display: flex;
   align-items: center;
-  gap: 10rem;
+  gap: 7rem;
   border-right: 3px solid #e8e8e8;
   padding-right: 32px;
 }
@@ -88,7 +114,8 @@
 
 .progress {
   display: flex;
-  gap: 1.21rem;
+  align-items: center;
+  gap: 0.81rem;
 }
 
 .progress_pic {
@@ -174,6 +201,8 @@
 input {
   height: 2.813rem;
   border: 1px solid #e8e8e8;
+  font-size: 1.1rem;
+  letter-spacing: 0.15px;
   border-radius: 4px;
   padding: 0 12px;
   outline: none;
@@ -181,8 +210,6 @@ input {
 
 input::placeholder {
   color: #c4c4c4;
-  font-size: 1.1rem;
-  letter-spacing: 0.15px;
 }
 
 .input_title {
