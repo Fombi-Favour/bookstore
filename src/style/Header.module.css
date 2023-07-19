@@ -10,11 +10,9 @@
   justify-content: space-between;
 }
 
-.row_1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/* .lesson_content {
+
+} */
 
 .text {
   display: flex;
@@ -53,8 +51,8 @@
 }
 
 .action li {
-  border-right: 1px solid #e8e8e8;
-  padding: 0.4rem 1rem;
+  border-right: 2px solid #e8e8e8;
+  padding: 0.2rem 1rem;
 }
 
 .action li:nth-child(1) {
