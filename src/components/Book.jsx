@@ -10,6 +10,7 @@ const Book = ({ books }) => {
   const { title, author, category } = books;
   const dispatch = useDispatch();
   const progressText = Math.floor(Math.random() * 101);
+  const chapterNumber = Math.floor(Math.random() * 21);
 
   const handleDelete = () => {
     dispatch(removeBookItems(books.item_id));
@@ -47,7 +48,15 @@ const Book = ({ books }) => {
           </div>
         </div>
       </main>
-      {/* <main className={styles.current}></main> */}
+      <main className={styles.current}>
+        <span className={styles.current_1}>current chapter</span>
+        <span className={styles.chapter}>
+          Chapter
+          {' '}
+          {chapterNumber}
+        </span>
+        <button type="button" className={styles.btn_upgrade}>update progress</button>
+      </main>
     </section>
   );
 };
