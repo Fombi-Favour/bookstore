@@ -72,11 +72,11 @@ This simplified version that allows users to:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link. Click here!](https://math-magician-bsoj.onrender.com/)
+- [Live Demo Link. Click here!](https://bookstore-djyd.onrender.com/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
