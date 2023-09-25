@@ -1,19 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap');
 
+.list {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+/* Books.jsx styling */
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.loading {
+  height: 500px;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  color: #0290ff;
+  margin-top: 5rem;
+}
+
+.loading .circular {
+  border: 8px solid #e8e8e8;
+  border-top-color: #0290ff;
+  color: transparent;
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 50%;
+  animation: spin infinite 2s;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Book.jsx styling */
 .lesson_panel {
   border: 1px solid #e8e8e8;
   background: #fff;
-  padding: 2rem 7.188rem 1.625rem 1.688rem;
+  padding: 2rem 2.188rem 1.625rem 1.688rem;
   margin: 2.313rem 6.25rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.row_1 {
+.lesson_content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 7rem;
+  border-right: 3px solid #e8e8e8;
+  padding-right: 32px;
 }
 
 .text {
@@ -53,8 +92,8 @@
 }
 
 .action li {
-  border-right: 1px solid #e8e8e8;
-  padding: 0.4rem 1rem;
+  border-right: 2px solid #e8e8e8;
+  padding: 0.2rem 1rem;
 }
 
 .action li:nth-child(1) {
@@ -72,12 +111,132 @@
 }
 
 /* progress */
-.progress p {
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.81rem;
+}
+
+.progress_pic {
   width: 4.25rem;
   height: 4.25rem;
-  border: 5px solid #e8e8e8;
-  border-top-color: #307bbe;
-  border-right-color: #307bbe;
-  border-bottom-color: #377cf6;
-  border-radius: 50px;
+}
+
+.progress_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress_text,
+.progress_complete {
+  color: #121212;
+}
+
+.progress_text {
+  font-size: 2rem;
+}
+
+.progress_complete {
+  opacity: 0.5;
+  font-size: 0.975rem;
+}
+
+.current {
+  display: flex;
+  flex-direction: column;
+  gap: 0.41rem;
+  padding: 0 4rem;
+}
+
+.current_1,
+.chapter {
+  color: #121212;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+.current_1 {
+  opacity: 0.5;
+  font-size: 0.813rem;
+  text-transform: uppercase;
+}
+
+.chapter {
+  font-size: 1rem;
+}
+
+.btn_upgrade {
+  width: 11.5rem;
+  height: 2.063rem;
+  background: #0290ff;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+/* AddBooks.jsx styling */
+.add_form {
+  padding: 0 6.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.add_form h2 {
+  color: #888;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.18px;
+}
+
+.form {
+  display: flex;
+  gap: 0.625rem;
+}
+
+input {
+  height: 2.813rem;
+  border: 1px solid #e8e8e8;
+  font-size: 1.1rem;
+  letter-spacing: 0.15px;
+  border-radius: 4px;
+  padding: 0 12px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #c4c4c4;
+}
+
+.input_title {
+  width: 31.5rem;
+}
+
+.input_author {
+  width: 12.5rem;
+}
+
+.input_category {
+  width: 10.815rem;
+  outline: none;
+  border: 1px solid #e8e8e8;
+  font-size: 1.1rem;
+  letter-spacing: 0.15px;
+}
+
+.btn_submit {
+  width: 11.5rem;
+  background: #0290ff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
