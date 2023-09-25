@@ -25,8 +25,11 @@ const Books = () => {
     <div className={styles.list}>
       {bookContent.map((item) => (
         <Book
-          key={item.item_id}
-          books={item}
+          key={item.itemId}
+          itemId={item.itemId}
+          title={item.title}
+          author={item.author}
+          category={item.category}
         />
       ))}
     </div>
